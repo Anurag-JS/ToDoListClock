@@ -1,0 +1,10 @@
+.greet{
+    background-color: rgb(13, 2, 76);
+    color: white;
+    height: 5rem;
+    text-align: center;
+}
+.h2{
+    position: relative;
+    top:30%;
+}

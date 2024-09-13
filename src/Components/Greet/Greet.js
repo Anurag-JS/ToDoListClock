@@ -1,3 +1,4 @@
+import style from "./greet.module.css"
 
 export default function Greet(){
 
@@ -16,8 +17,8 @@ export default function Greet(){
     }
 
     return(
-        <div>
-            <h2>{greeting()}</h2>
+        <div className={style.greet}>
+            <h2 className={style.h2}>{greeting()}</h2>
         </div>
     )
 }
