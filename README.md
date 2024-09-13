@@ -12,6 +12,7 @@ This project is a simple React application that features three components:
 - **ToDoList Component**: A task manager where users can add, delete, and toggle task completion.
   
 ##Folder Structure
+```
 src/
 │
 ├── Components/
@@ -26,5 +27,6 @@ src/
 │       └── todoList.module.css
 ├── App.js
 └── styles.css
+```
 
 
