@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+import style from "./toDoList.module.css";
 
 export default function (){
 
@@ -25,21 +26,24 @@ export default function (){
     };
 
     return(
-        <div>
+        <div className={style.todoContainer}>
             <h2>Create Todo</h2>
             <div>
-                <form>
-                    <label>Enter todo</label>
+                <form onSubmit={(e) => {
+                    e.preventDefault();
+                    addTodo();
+                }}>
+                    <label><strong>Enter todo</strong></label> &nbsp;
                     <input value={newTodo} onChange={(e) => setNewTodo(e.target.value)} />
                 </form>
-                <button onClick={addTodo}>Add Todo</button>
+                <button className={style.addBtn} onClick={addTodo}>Add Todo</button>
             </div>
-            <div>
-                {todo.map((todo,i) => <div>
-                    <span key={i}>{todo.content}</span>
-                    <button onClick={()=> deleteTodo(i)}>Delete</button>
-                    <button onClick={() => toggleCompleted(i)}>{todo.completed ? "Completed" : "Pending"}</button>
-                    </div>)}
+            <div className={style.listContainer}>
+                {todo.map((todo,i) => <><div>
+                    <span key={i}><strong>{todo.content}</strong></span> &nbsp; &nbsp;
+                    <button className={style.deleteBtn} onClick={()=> deleteTodo(i)}>Delete</button> &nbsp;
+                    <button className={style.toggleBtn} onClick={() => toggleCompleted(i)}>{todo.completed ? "Completed" : "Pending"}</button>
+                    </div><br></br> </>)}
             </div>
         </div>
     )

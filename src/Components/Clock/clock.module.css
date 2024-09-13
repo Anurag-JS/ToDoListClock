@@ -1,0 +1,11 @@
+.clock{
+    background-color: goldenrod;
+    color: black;
+    border-radius: 45%; 
+    width: 9rem;
+    height: 7rem;
+    position: relative;
+    left: 45%;
+    text-align: center;
+    justify-content: center;
+}
